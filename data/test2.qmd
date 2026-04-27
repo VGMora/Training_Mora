@@ -1,0 +1,28 @@
+---
+title: "Untitled"
+format: html
+---
+
+```{r}
+library(readr)
+library(here)
+```
+
+```{r}
+bg_chem <- read_csv(here::here("data/BGchem2008data.csv"))
+#| eval: false
+#| echo: false
+colnames(bg_chem)
+str(bg_chem)
+head(bg_chem)
+summary(bg_chem)
+
+nitrate <- mean(bg_chem$NO3)
+nitrite <- mean(bg_chem$NO2)
+amm     <- mean(bg_chem$NH4)
+phos    <- mean(bg_chem$P)
+
+ratio <- (nitrate + nitrite + amm) / phos
+
+plot(bg_chem$P, bg_chem$NO2 + bg_chem$NO3 + bg_chem$NH4)
+```
