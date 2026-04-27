@@ -7,7 +7,4 @@ Welcome to my Delta socioecological monitoring analysis.
 
 ## Course Analyses
 
-- Data Visualization (link coming soon)
-Under construction
-Under construction
-WIP
+[Data Visualization](notebooks/data-visualization.html)
